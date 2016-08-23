@@ -1,0 +1,173 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+    .body-content {
+        padding: 0;
+    }
+}
+
+/* Css For the Player List DataGrid*/
+.TableHeader20 {
+    width: 20%;
+}
+
+.TableHeader15 {
+    width: 15%;
+}
+
+.TableHeader10 {
+    width: 10%;
+}
+
+
+
+/* Css for the picture wheel*/
+
+.selector,
+.selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.selector button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #428bca;
+  border-radius: 50%;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  transition: all .1s;
+}
+
+.selector button:hover { background: #3071a9; }
+
+.selector button:focus { outline: none; }
+
+.selector {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 140px;
+  height: 140px;
+  margin-top: -70px;
+  margin-left: -70px;
+}
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector li input { display: none; }
+
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.selector li input + label:hover { border: solid 1px black; }
+
+.selector li input:checked + label {
+  background: #5cb85c;
+  color: white;
+}
+
+.selector li input:checked + label:hover { border: 1px solid #808080; }
+
+.selector.open li input + label {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  margin-left: -40px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.circleImg
+{
+    width:100%;
+    height:100%;
+}
+
+.hiddenColumn
+{
+    display:none;
+}
+
+.dropdownMenuBtn 
+{
+    color: #999999;
+    background: #222222;
+    border: none;
+    margin-top: 13px;
+
+}
+.menuCaret 
+{
+    border-top-color: #99958D !important;
+    border-bottom-color: #959599 !important;
+}
